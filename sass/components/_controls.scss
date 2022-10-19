@@ -151,13 +151,18 @@
     // countable
 
     &__btn--countable {
-        width: 65%;
+        width: auto;
+        flex-grow: 2;
     }
 
     &__btn-count {
+        display: block;
+        // border: 1px solid $color-gray-darker;
+        padding: 0 .6rem;
+        margin-left: auto;
+        width: auto;
         align-self: center;
         text-align: center;
-        flex-grow: 1;
         position: relative;
 
         &::before,
@@ -169,13 +174,13 @@
             background-color: $color-gray-darker;
         }
         &::before {
-            left: -5px;
-            top: -4px;
+            left: -1px;
+            top: -3px;
         }
 
         &::after {
-            right: -5px;
-            top: -4px;
+            right: -1px;
+            top: -3px;
 
         }
     }
@@ -183,17 +188,20 @@
     &__count-controls {
         text-align: center;
         align-self: center;
-        flex-grow: 2;
         display: flex;
         justify-content: end;
-        gap: .5rem;
         position: relative;
 
 
     }
 
     &__count-btn {
-        padding: .8rem .8rem;
+        padding: .8rem 1.2rem;
+        transition: .3s background-color ease;
+
+        &:hover {
+            background-color: $color-gray-darker;
+        }
     }
 
 
