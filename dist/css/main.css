@@ -58,6 +58,10 @@ ul {
   font-family: "Lora", serif !important;
 }
 
+.icon {
+  filter: invert(3%) sepia(10%) saturate(100%) hue-rotate(314deg) brightness(101%) contrast(87%);
+}
+
 body {
   font-size: 1.6rem;
 }
@@ -208,13 +212,11 @@ button {
   text-align: left;
 }
 .controls__btn--countable {
-  width: auto;
   flex-grow: 2;
 }
 .controls__btn-count {
   display: block;
-  padding: 0 0.6rem;
-  margin-left: auto;
+  padding: 0 1rem;
   width: auto;
   align-self: center;
   text-align: center;
@@ -244,10 +246,17 @@ button {
 }
 .controls__count-btn {
   padding: 0.8rem 1.2rem;
+  position: relative;
   transition: 0.3s background-color ease;
 }
 .controls__count-btn:hover {
   background-color: #d2d2d2;
+}
+.controls__icon {
+  width: 1.2rem;
+}
+.controls__icon--reset {
+  transform: scale(1) translateY(10%) rotate(-10deg);
 }
 .controls__footer-wrapper {
   position: absolute;
@@ -309,10 +318,23 @@ button {
   opacity: 1;
   margin-bottom: 2.2rem;
 }
+.result__name-container {
+  display: flex;
+}
 .result__name {
   font-weight: 700;
   font-size: 2.4rem;
   margin-bottom: 0.8rem;
+  margin-right: 0.4rem;
+}
+.result__icon {
+  height: 2.6rem;
+  filter: inherit;
+  cursor: help;
+  transition: 0.1s filter ease-in;
+}
+.result__icon:hover {
+  filter: invert(97%) sepia(64%) saturate(1172%) hue-rotate(327deg) brightness(87%) contrast(97%);
 }
 .result__desc {
   max-width: 80%;

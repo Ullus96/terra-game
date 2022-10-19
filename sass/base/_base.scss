@@ -62,3 +62,8 @@ ul {
   font-family: $lora !important;
 }
 
+.icon {
+  // change color to $color-text
+  // https://codepen.io/sosuke/pen/Pjoqqp
+  filter: invert(3%) sepia(10%) saturate(100%) hue-rotate(314deg) brightness(101%) contrast(87%);
+}

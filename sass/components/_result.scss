@@ -48,10 +48,26 @@
     }
 
     // desc
+    &__name-container {
+        display: flex;
+    }
+
     &__name {
         font-weight: 700;
         font-size: 2.4rem;
         margin-bottom: 0.8rem;
+        margin-right: 0.4rem;
+    }
+
+    &__icon {
+        height: 2.6rem;
+        filter: inherit;
+        cursor: help;
+        transition: .1s filter ease-in;
+
+        &:hover {
+            filter: invert(97%) sepia(64%) saturate(1172%) hue-rotate(327deg) brightness(87%) contrast(97%);
+        }
     }
 
     &__desc {
