@@ -1,0 +1,66 @@
+.header {
+    width: 100vw;
+    position: relative;
+    z-index: 5;
+    background-color: $color-gray;
+    box-shadow: 0 0 2rem rgba($color-black, .2);
+    border-bottom: 1px $color-gray-darker solid;
+
+    &__inner {
+        max-width: 148rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    &__logo {
+        font-family: $quat;
+        padding-left: 1rem;
+
+        &--main {       
+            text-transform: uppercase;     
+            font-weight: 700;
+            font-size: 3.8rem;
+            letter-spacing: 6px;
+        }
+
+        &--sub {
+            margin-top: -.8rem;
+            font-weight: 400;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.nav {
+
+    &__item-list {
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__item {
+        font-size: 2.2rem;
+        font-family: $quat;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $color-text;
+            width: 0;
+            height: 1px;
+            left: 50%;
+            bottom: 0;
+            transition: .2s width ease-in-out,
+            .2s left ease-in-out;
+        }
+
+        &:hover:after {
+            width: 100%;
+            left: 0;
+        }
+    }
+}

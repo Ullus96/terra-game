@@ -1,0 +1,67 @@
+//basic resets, обнуление стилей:
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// установка 1rem = 10px, но напрямую =10px - это перезаписать стандартный размер шрифта браузера, поэтому считаем, что (10px / 16px = 0.625 = 62.5%) 
+html {
+  // font-size: 50%; 
+  font-size: 62.5%; 
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $lora;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $color-text;
+  background-color: $color-gray-darker;
+  height: 100%;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+
+.content {
+    max-width: 148rem;
+    margin: 0 auto;
+    background-color: $color-gray;
+    border-left: 1px $color-gray-darker solid;
+    border-right: 1px $color-gray-darker solid;
+    box-shadow: 0 0 3rem rgba($color-black, .2);
+    z-index: 4;
+}
+
+.full-page {
+    height: calc(100vh - 8rem);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+.ru {
+  font-family: $lora !important;
+}
+
+.scroller {  
+  overflow-y: auto;    
+}

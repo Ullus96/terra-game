@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra - Worldbuilding Game</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./dist/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href=".dist/favicon/site.webmanifest">
+</head>
+<body class="no-scroll">
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <h1 class="header__logo--main">
+                    TERRA
+                </h1>
+                <h4 class="header__logo--sub">
+                    Worldbuilding Game
+                </h4>                    
+            </div>
+            <nav class="nav">
+                <ul class="nav__item-list">
+                    <li class="nav__item"><a href="#">Play</a></li>
+                    <li class="nav__item"><a href="#">Notes</a></li>
+                    <li class="nav__item"><a href="#">Download</a></li>
+                    <li class="nav__item"><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="content full-page">
+            <div class="roll">
+
+
+                <!-- left controls -->
+                <div class="controls full-page">
+                    <!-- upper stats -->
+                    <div class="controls__stats-container">
+                        <!-- era -->
+                        <div class="controls__progress-box controls__progress-box--1">
+                            <h3 class="heading-title">
+                                Era:
+                            </h3>
+                            <div class="controls__era-counter">
+                                <span class="controls__counter-current">
+                                    4
+                                </span>
+                                <span class="controls__total-counter" id="age-total">6</span>
+                            </div>
+                        </div>
+                        <!-- turns -->
+                        <div class="controls__progress-box controls__progress-box--2">
+                            <h3 class="heading-title">
+                                Turn:
+                            </h3>
+                            <div class="controls__turns-counter">
+                                <span class="controls__counter-current">
+                                    10
+                                </span>
+                                <span class="controls__total-counter" id="turns-total">12</span>
+                            </div>
+                        </div>
+                        <!-- players -->
+                        <div class="controls__progress-box controls__progress-box--3">
+                            <h3 class="heading-title">
+                                Player:
+                            </h3>
+                            <div class="controls__players-counter">
+                                <span class="controls__counter-current">
+                                    1
+                                </span>
+                                <span class="controls__total-counter" id="players-total">4</span>
+                            </div>
+                        </div>
+                        <!-- tooltip -->
+                        <div class="controls__tooltip-box">
+                            <h2 class="controls__era-name">
+                                Age of Discovery
+                            </h2>
+                            <p class="controls__era-desc">
+                                The empires have started to grow, it’s time to expand their reach and explore the nearby shores. Roll the <span class="controls__era-accent">"Age&nbsp;of&nbsp;Discovery"</span> button, then proceed by clicking <span class="controls__era-accent">"Next&nbsp;Turn"</span>. Also, expand your neighbour once in this Era. 
+                            </p>
+                        </div>
+                    </div>
+                    <!-- controls -->
+                    <div class="controls__game-progress-btns">
+                        <button class="controls__prev-btn btn">&larr; Undo</button>
+                        <button class="controls__next-btn btn">Next Turn &rarr;</button>
+                    </div>
+                    <!-- manual rolls -->
+                    <div class="controls__btns scroller">
+                        <div class="controls__btn-wrapper">
+                            <button class="btn controls__btn">Landmass</button>
+                        </div>
+                        <div class="controls__btn-wrapper">
+                            <button class="btn controls__btn controls__btn--countable">Biome</button>
+                            <div class="controls__btn-count">17</div>
+                            <div class="controls__count-controls">
+                                <button class="controls__count-btn" id="count-prev">-</button>
+                                <button class="controls__count-btn" id="count-next">+</button>
+                                <button class="controls__count-btn" id="count-reset">R</button>
+                            </div>
+                        </div>
+                        <div class="controls__btn-wrapper">
+                            <button  button class="btn controls__btn">Race</button>
+                        </div>
+                        <div class="controls__btn-wrapper">
+                            <button class="btn controls__btn">Settlement</button>
+                        </div>
+                        <div class="controls__btn-wrapper">
+                            <button class="btn controls__btn">War!</button>
+                        </div>
+                        <div class="controls__btn-wrapper">
+                            <button class="btn controls__btn controls__btn--countable">Dice</button>
+                            <div class="controls__btn-count">5</div>
+                            <div class="controls__count-controls">
+                                <button class="controls__count-btn" id="count-prev">-</button>
+                                <button class="controls__count-btn" id="count-next">+</button>
+                                <button class="controls__count-btn" id="count-reset">R</button>
+                            </div>
+                        </div>
+                        <div class="controls__btn-wrapper">
+                            <button class="btn controls__btn">Age of Discovery</button>
+                        </div>
+                        <div class="controls__btn-wrapper">
+                            <button class="btn controls__btn">Age of Empires</button>
+                        </div>
+                        <div class="controls__btn-wrapper">
+                            <button class="btn controls__btn">Rise and Fall</button>
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    <div class="controls__footer-wrapper">
+                        <div class="controls__footer">
+                            <ul>
+                                <li>Based on <a href="https://nookrium.itch.io/mappa-imperium" class="controls__footer-link">Mappa Imperium</a> by <a href="https://nookrium.itch.io/mappa-imperium">Nookrium</a></li>
+                                <li>Version of Jun 23, 2022</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- right -->
+                <div class="result__container">
+                    <div class="result__inner">
+                        <h4 class="result__title">Roll Results</h4>
+                        <!-- <h4 class="result__title ru">Результат броска</h4> -->
+                        <!-- dynamic content -->
+                        <div class="result__dices">
+                            <div class="result__dice">4</div>
+                            <div class="result__dice">3</div>
+                        </div>
+                        <div class="result__sum">Total: <span id="dices-sum">7</span></div>
+                        <div class="result__name">Gnomes</div>
+                        <div class="result__desc">The gnomes are a race of diminutive and highly intelligent humanoids, known for their mastery of technology. The eccentric, often-brilliant gnomes are one of the most peculiar races of the world. Gnomes are renowned mechanics, engineers, and technicians, widely respected for their knowledge of the scientific facets of the world and their ability to transform said knowledge into surprising tools, vehicles, armor, and weapons.</div>
+                    </div>
+                    <div class="result__image"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    display: block;
+    background-color: transparent;
+    padding: .8rem 2rem;
+    transition: .3s background-color ease;
+
+    &:hover {
+        background-color: $color-gray-darker;
+    }
+}
