@@ -1,0 +1,29 @@
+// add this class to elements, if box-height (or how to spell it correctly) is > than smth
+.scrollable {  
+    overflow-y: scroll; 
+    padding-right: .7rem;
+
+    // mozilla
+    scrollbar-color: mix(black, $color-gray-darker, 7%) rgba($color-gray-darker, .4);
+    scrollbar-width: thin;
+    transition: scrollbar-color .2s ease;
+
+    &:hover {
+        scrollbar-color: mix(black, $color-gray-darker, 15%);
+    }
+    
+    // chrome
+    &::-webkit-scrollbar {
+        width: .8rem;
+        background: rgba($color-gray-darker, .4);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: mix(black, $color-gray-darker, 7%);
+        transition: all .2s ease;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: mix(black, $color-gray-darker, 15%);
+    }
+  }

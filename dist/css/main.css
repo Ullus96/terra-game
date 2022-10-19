@@ -58,10 +58,6 @@ ul {
   font-family: "Lora", serif !important;
 }
 
-.scroller {
-  overflow-y: auto;
-}
-
 body {
   font-size: 1.6rem;
 }
@@ -333,6 +329,29 @@ button {
 .roll {
   display: flex;
   position: relative;
+}
+
+.scrollable {
+  overflow-y: scroll;
+  padding-right: 0.7rem;
+  scrollbar-color: #c3c3c3 rgba(210, 210, 210, 0.4);
+  scrollbar-width: thin;
+  transition: scrollbar-color 0.2s ease;
+}
+.scrollable:hover {
+  scrollbar-color: #b3b3b3;
+}
+.scrollable::-webkit-scrollbar {
+  width: 0.8rem;
+  background: rgba(210, 210, 210, 0.4);
+}
+.scrollable::-webkit-scrollbar-thumb {
+  background: #c3c3c3;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
 }
 
 .header {
